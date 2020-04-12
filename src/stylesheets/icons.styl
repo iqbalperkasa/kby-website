@@ -8,6 +8,11 @@
   &.icon-quote
     background-image url('../../public/icons/icon-quote.png')
 
+.icon-bank
+  filter brightness(0) invert(1)
+  width 72px
+  height 72px
+
 .icon-text
   display inline-block
 
@@ -26,3 +31,11 @@
 
   &.icon-text-arrow-up-right::before
     background-image url('../../public/icons/icon-arrow-up-right.png')
+
+  &.icon-text-bca::before
+    background-image url('../../public/icons/icon-bca.png')
+    @extend .icon-bank
+
+  &.icon-text-ovo::before
+    background-image url('../../public/icons/icon-ovo.png')
+    @extend .icon-bank
