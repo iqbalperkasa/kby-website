@@ -1,0 +1,28 @@
+.icon
+  width 24px
+  height 24px
+  background-repeat no-repeat
+  background-position center
+  background-size contain
+
+  &.icon-quote
+    background-image url('../../public/icons/icon-quote.png')
+
+.icon-text
+  display inline-block
+
+  &::before
+    content ''
+    display inline-block
+    width 20px
+    height 20px
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+    vertical-align middle
+
+  &.icon-text-instagram::before
+    background-image url('../../public/icons/icon-instagram.png')
+
+  &.icon-text-arrow-up-right::before
+    background-image url('../../public/icons/icon-arrow-up-right.png')

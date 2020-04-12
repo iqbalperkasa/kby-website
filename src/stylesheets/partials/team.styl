@@ -1,0 +1,27 @@
+.team
+  @extend .section
+  margin-top 200px
+
+  .team-wrapper
+    display flex
+    flex-wrap wrap
+
+    .team-item
+      // width 30%
+      // border 1px solid red
+      // margin 10px
+      padding 20px
+      flex 2 0 30%
+
+      &-avatar
+        width 100%
+        margin-bottom 10px
+        border-radius 999px
+        background-size contain
+        background-repeat no-repeat
+        background-position center
+
+        &:after
+          content ''
+          display block
+          padding-bottom 100%

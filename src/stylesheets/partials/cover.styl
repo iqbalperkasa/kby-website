@@ -1,0 +1,41 @@
+.cover
+  @extend .section
+  margin-top 0
+
+  .logo
+    width 80px
+    height 80px
+    background-image url('../../public/logo.png')
+    background-size contain
+    background-repeat no-repeat
+    // background-color grey
+    margin-bottom 60px
+
+  .logo-text
+    @extend .heading
+    margin-bottom 30px !important
+
+    span
+      color _yellow
+
+  .display
+    max-width 180px
+    margin-bottom 30px
+
+  .collected
+    font-size 40px
+    font-weight: 700
+    display inline-block
+
+    .line
+      width 100%
+      height 5px
+      margin-top 3px
+      margin-bottom 5px
+      background-color _yellow
+
+  .illust
+    background-image url('../../public/illustrations/illust-cover.png')
+    position absolute
+    right -80px
+    margin-top -80px
