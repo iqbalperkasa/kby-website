@@ -4,12 +4,15 @@
 
   .team-wrapper
     display flex
-    flex-wrap wrap
+    // flex-wrap wrap
+    flex-flow row wrap
 
     .team-item
-      width 33.333%
+      width 33%
       padding 20px
-      flex 1 0 30%
+
+      @media (max-width: 500px)
+        width 50%
 
       &-avatar
         width 100%
