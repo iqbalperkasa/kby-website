@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist/ && rm -rd .cache/",
+    "clean": "rm -rf dist/ && rm -rf .cache/",
     "dev": "yarn clean && parcel src/index.pug",
     "build": "parcel build src/index.pug",
     "release": "yarn clean && yarn build"
