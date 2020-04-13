@@ -13,5 +13,8 @@
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
     "stylus": "^0.54.7"
+  },
+  "dependencies": {
+    "tabletop": "^1.6.2"
   }
 }
