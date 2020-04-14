@@ -1,7 +1,9 @@
 import Tabletop from 'tabletop';
 
+const document = 'https://docs.google.com/spreadsheets/d/1_0Wsls-Slug75roxGIer1HcxnlR4y-jLJFZcgmBS50A/pubhtml';
+
 const params = {
-  key: 'https://docs.google.com/spreadsheets/d/1_0Wsls-Slug75roxGIer1HcxnlR4y-jLJFZcgmBS50A/pubhtml',
+  key: document,
   simpleSheet: true,
 };
 
