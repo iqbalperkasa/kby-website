@@ -1,14 +1,29 @@
-import fetchCollected from './fetchCollected';
-import copy from 'copy-to-clipboard';
+import ClipboardJS from 'clipboard';
 
-const collectedWrapper = document.querySelector('.js-collected');
-fetchCollected.then(collected => collectedWrapper.innerText = collected);
+const collectedDom = document.querySelector('.js-collected');
+let lastCollected = window.localStorage.getItem('last_collected');
+
+if (lastCollected) {
+  collectedDom.innerText = lastCollected;
+}
+
+fetch('https://kby-api.now.sh/api/collected')
+  .then(resp => resp.json())
+  .then(collected => {
+    collectedDom.innerText = collected
+    window.localStorage.setItem('last_collected', collected);
+  });
+
+new ClipboardJS('.js-ctc');
+
+if (!ClipboardJS.isSupported()) {
+  document.querySelectorAll('.js-ctc-notif').forEach(item => item.classList.add('display-none'));
+}
 
 document.querySelectorAll('.js-ctc').forEach(item => {
   item.addEventListener('click', (elem) => {
-    const number = elem.srcElement.dataset.ctc;
+    const number = elem.srcElement.dataset.clipboardText;
     changeNumberCtcNotif(number, 'No. rekening berhasil di-copy');
-    copy(number);
     return true;
   })
 });
@@ -19,6 +34,6 @@ function changeNumberCtcNotif(number, message) {
   ctcNotifDom.innerText = message;
   window.setTimeout(() => {
     ctcNotifDom.innerText = initMessage;
-  }, 3000);
+  }, 2000);
   return true;
 }
