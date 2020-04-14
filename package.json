@@ -15,6 +15,7 @@
     "stylus": "^0.54.7"
   },
   "dependencies": {
+    "copy-to-clipboard": "^3.3.1",
     "tabletop": "^1.6.2"
   }
 }
