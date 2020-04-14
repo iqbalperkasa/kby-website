@@ -1,6 +1,17 @@
 import fetchCollected from './fetchCollected';
 import ClipboardJS from 'clipboard';
 
+const collectedDom = document.querySelector('.js-collected');
+let lastCollected = window.localStorage.getItem('last_collected');
+
+if (lastCollected) {
+  collectedDom.innerText = lastCollected;
+}
+
+fetchCollected.then(collected => {
+  collectedDom.innerText = collected
+  window.localStorage.setItem('last_collected', collected);
+});
 
 new ClipboardJS('.js-ctc');
 
