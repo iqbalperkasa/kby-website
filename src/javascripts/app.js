@@ -1,5 +1,16 @@
 import ClipboardJS from 'clipboard';
 
+function getApiUrl() {
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return 'http://localhost:3000'
+      break;
+    default:
+      return 'https://kby-api.now.sh'
+      break;
+  }
+}
+
 const collectedDom = document.querySelector('.js-collected');
 let lastCollected = window.localStorage.getItem('last_collected');
 
@@ -7,7 +18,7 @@ if (lastCollected) {
   collectedDom.innerText = lastCollected;
 }
 
-fetch('https://kby-api.now.sh/api/collected')
+fetch(`${getApiUrl()}/api/collected`)
   .then(resp => resp.json())
   .then(collected => {
     collectedDom.innerText = collected
