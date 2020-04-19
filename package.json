@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.6",
-    "tabletop": "^1.6.2"
+    "tabletop": "^1.6.2",
+    "tailwindcss": "^1.2.0"
   }
 }
