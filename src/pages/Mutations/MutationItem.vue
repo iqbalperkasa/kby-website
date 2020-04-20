@@ -1,24 +1,37 @@
 <template lang="pug">
   section
     LayoutDefault
-      h1.title Mutasi
-      ul
-        li
-          router-link(to='/mutasi/1') Mutasi Minggu ke-1
+      router-link(to='/mutasi') Kembali ke list mutasi
+      .mb-30
+      div(v-html='report')
+      .mt-30
+      router-link(to='/mutasi') Kembali ke list mutasi
 </template>
 
 <script>
 import LayoutDefault from 'src/layouts/default';
+import reports from './reports/*/report.pug';
 
 export default {
-  name: 'Mutations',
+  name: 'MutationItem',
   components: {
     LayoutDefault,
+  },
+  data() {
+    const id = this.$route.params.id;
+
+    return {
+      id,
+      report: reports[id],
+    };
+  },
+  mounted() {
+    console.log(this.report);
   },
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .table-wrapper
   overflow-x auto
 .table
