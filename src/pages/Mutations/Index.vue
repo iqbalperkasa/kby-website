@@ -1,61 +1,31 @@
 <template lang="pug">
   section
     LayoutDefault
-      h3.heading.mb-30 Donasi Masuk Harian Berupa Uang
+      h3.heading.mb-30 Donasi Masuk Berupa Uang
       table.table.table-zebra.text-align-center
         tr
-          th Tanggal
+          th Minggu, Tanggal
           th Jumlah
         tr
-          td 10/04/2020
-          td Rp1.400.883,78
-        tr
-          td 11/04/2020
-          td Rp631.924,00
-        tr
-          td 12/04/2020
-          td Rp350.000,00
-        tr
-          td 13/04/2020
-          td Rp500.000,00
-        tr
-          td 14/04/2020
-          td Rp1.200.001,00
-        tr
-          td 15/04/2020
-          td Rp450.000,00
-        tr
-          td 16/04/2020
-          td Rp150.000,00
-        tr
-          td 17/04/2020
-          td Rp100.000,00
-        tr
-          td 18/04/2020
-          td Rp100.000,00
-        tr
-          td 19/04/2020
-          td Rp60.000,00
-        tr.font-weight-bold
-          td Total
-          td Rp4.942.808,78
+          td 1, (10/04 - 16/04)
+          td Rp4.682.808,78
 
       h3.heading.mb-30 Donasi Masuk Berupa Barang
       table.table.table-zebra.text-align-center
         tr
-          th Tanggal
+          th Minggu, Tanggal
           th Barang
           th Jumlah
         tr
-          td 11/04/2020
+          td 1, 11/04
           td Masker Kain
           td 4 Lusin
         tr
-          td 16/04/2020
+          td 1, 16/04
           td Masker Kain
           td 1 Lusin
         tr
-          td 16/04/2020
+          td 1, 16/04
           td Masker Kain
           td 1 Lusin
 

@@ -2,15 +2,20 @@
   section.display
     h1.title #[span #]KitaBerbagiYuk
     .description Berbagi untuk sahabat Kota Bandung.
-    .collected
+    .fund
       .js-collected {{ collected ? collected : 'Rp...' }}
       .line
       .caption Total Donasi Terkumpul
+    .mt-20
+    .fund.fund-smaller
+      .js-given {{ given ? given : 'Rp...' }}
+      .line
+      .caption Total Donasi Tersalur
     .illust(:style='`background-image: url(${imgSrc.illustDisplay})`')
 </template>
 
 <script>
-const BASE_URL = 'https://kitaberbagiyuk.now.sh';
+const BASE_URL = '';
 const BASE_URL_DEV = 'http://localhost:3000';
 
 import illustDisplay from 'public/illustrations/illust-display.png';
@@ -20,6 +25,7 @@ export default {
   data() {
     return {
       collected: null,
+      given: null,
       imgSrc: {
         illustDisplay,
       },
@@ -36,12 +42,14 @@ export default {
     },
   },
   mounted() {
-    this.initWriteCollected();
+    this.initWriteFund();
     this.fetchCollected();
+    this.fetchGiven();
   },
   methods: {
-    initWriteCollected() {
+    initWriteFund() {
       this.collected = window.localStorage.getItem('last_collected');
+      this.given = window.localStorage.getItem('last_given');
     },
     fetchCollected() {
       return fetch(`${this.apiUrl}/collected`)
@@ -49,6 +57,14 @@ export default {
         .then(collected => {
           this.collected = collected;
           window.localStorage.setItem('last_collected', collected);
+        });
+    },
+    fetchGiven() {
+      return fetch(`${this.apiUrl}/given`)
+        .then(resp => resp.json())
+        .then(given => {
+          this.given = given;
+          window.localStorage.setItem('last_given', given);
         });
     },
   },
@@ -72,10 +88,17 @@ export default {
     max-width 180px
     margin-bottom 30px
 
-  .collected
+  .fund
     font-size 40px
     font-weight: 700
     display inline-block
+
+    &.fund-smaller
+      font-size 30px
+
+      .line
+        height 3px
+        margin-top 0
 
     .line
       width 100%
