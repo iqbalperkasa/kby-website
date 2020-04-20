@@ -37,6 +37,7 @@ export default {
   },
   mounted() {
     this.initWriteCollected();
+    this.fetchCollected();
   },
   methods: {
     initWriteCollected() {
