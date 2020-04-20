@@ -4,7 +4,7 @@ const BASE_URL_DEV = 'http://localhost:3000';
 const collectedDom = document.querySelector('.js-collected');
 let lastCollected = window.localStorage.getItem('last_collected');
 
-if (lastCollected) {
+if (lastCollected && collectedDom) {
   collectedDom.innerText = lastCollected;
 }
 
