@@ -44,7 +44,7 @@ export default {
       this.collected = window.localStorage.getItem('last_collected');
     },
     fetchCollected() {
-      return fetch(`${this.apiUrl()}/collected`)
+      return fetch(`${this.apiUrl}/collected`)
         .then(resp => resp.json())
         .then(collected => {
           this.collected = collected;
