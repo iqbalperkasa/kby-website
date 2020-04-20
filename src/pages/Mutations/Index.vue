@@ -85,8 +85,6 @@
             td.text-align-center(colspan='3') Total
             td.text-align-center Rp4.662.750,00
             td
-
-      p Lihat lebih lengkapnya di #[a(href=`https://docs.google.com/spreadsheets/d/11LaLYI-cbtITtq77GcWPhhtMCiALXLk3tHIux0ySEb8/edit?usp=sharing`) sini].
 </template>
 
 <script>
