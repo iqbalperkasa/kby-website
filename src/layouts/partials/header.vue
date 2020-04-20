@@ -4,9 +4,9 @@
       .logo(:style='`background-image: url(${imgSrc.logo})`')
         router-link(to='/')
       .navigation
-        router-link.navigation-item(to='/tentang') Tentang
         router-link.navigation-item(to='/mutasi') Mutasi
         router-link.navigation-item(to='/galeri') Galeri
+        router-link.navigation-item(to='/tentang') Tim
 </template>
 
 <script>
