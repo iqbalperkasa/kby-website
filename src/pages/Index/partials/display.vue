@@ -15,7 +15,7 @@
 </template>
 
 <script>
-const BASE_URL = 'https://kitaberbagiyuk.now.sh';
+const BASE_URL = '';
 const BASE_URL_DEV = 'http://localhost:3000';
 
 import illustDisplay from 'public/illustrations/illust-display.png';
