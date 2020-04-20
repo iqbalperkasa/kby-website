@@ -1,4 +1,3 @@
-import './apps/collected';
 import './apps/copy';
 
 import Vue from 'vue'
