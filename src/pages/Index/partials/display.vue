@@ -44,6 +44,7 @@ export default {
   mounted() {
     this.initWriteFund();
     this.fetchCollected();
+    this.fetchGiven();
   },
   methods: {
     initWriteFund() {
