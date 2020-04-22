@@ -2,18 +2,24 @@
   section
     LayoutDefault
       h1.title Mutasi
-      ul
+      ul(v-for='(week, report, i) in reports')
         li
-          router-link(to='/mutasi/1') Mutasi Minggu ke-1
+          router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-{{ i }}
 </template>
 
 <script>
 import LayoutDefault from 'src/layouts/default';
+import reports from './reports/*/report.pug';
 
 export default {
   name: 'Mutations',
   components: {
     LayoutDefault,
+  },
+  data() {
+    return {
+      reports,
+    };
   },
 }
 </script>
