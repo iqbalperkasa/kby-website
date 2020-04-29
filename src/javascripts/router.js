@@ -5,7 +5,6 @@ Vue.use(VueRouter);
 
 import Index from 'pages/Index/Index.vue';
 import Galleries from 'pages/Galleries/Index.vue';
-import GalleryItem from 'pages/Galleries/GalleryItem.vue';
 import About from 'pages/About/Index.vue';
 import Mutations from 'pages/Mutations/Index.vue';
 import MutationItem from 'pages/Mutations/MutationItem.vue';
@@ -13,7 +12,6 @@ import MutationItem from 'pages/Mutations/MutationItem.vue';
 const routes = [
   { path: '/', component: Index },
   { path: '/(gallery|galeri)', component: Galleries },
-  { path: '/(gallery|galeri)/:id', component: GalleryItem },
   { path: '/(about|tentang)', component: About },
   { path: '/mutasi', component: Mutations },
   { path: '/mutasi/:id', component: MutationItem },

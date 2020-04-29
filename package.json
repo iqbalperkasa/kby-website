@@ -1,8 +1,7 @@
 {
   "name": "kby_website",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf dist/ && rm -rf .cache/",
     "dev": "yarn clean && parcel src/index.pug",
@@ -10,6 +9,7 @@
     "release": "yarn clean && yarn build"
   },
   "alias": {
+    "api": "./src/javascripts/api",
     "pages": "./src/pages",
     "partials": "./src/partials",
     "public": "./public",
@@ -23,12 +23,17 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "api": "^0.0.1",
+    "axios": "^0.19.2",
     "clipboard": "^2.0.6",
+    "graphql": "^15.0.0",
+    "jsonpath-plus": "^4.0.0",
     "navigo": "^7.1.2",
     "tabletop": "^1.6.2",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-router": "^3.1.6"
+    "vue-router": "^3.1.6",
+    "vue-tinybox": "^1.1.0"
   }
 }

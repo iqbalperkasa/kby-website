@@ -1,38 +1,48 @@
 <template lang="pug">
   section
     LayoutDefault
-      h1.heading.mb-30 Galeri
-      div(v-for='(post, slug, i) in posts')
-        .thumbnail(:style='`background-image: url(${thumbnails[slug]})`')
-          .thumbnail-gradient
-            router-link(:to='`/galeri/${slug}`')
-          .info
-            h3.heading.mb-5 {{ post.title }}
-            .float-left {{ post.date }}
-            .float-left.ml-20 {{ getPhotosCount(slug) }} foto
-            .clearfix
+      h1.heading.mb-30.text-align-center Galeri
+      div(v-for='(img, i) in images')
+        .thumbnail(
+          :style='`background-image: url(${img.src})`'
+          @click='galleryIndex = i'
+        )
+      .clearfix
+      Tinybox(
+        v-model='galleryIndex'
+        :images='images'
+        loop
+      )
 </template>
 
 <script>
+import { getPhotos } from 'api';
 import LayoutDefault from 'src/layouts/default';
-import posts from './posts/*/meta.json';
-import photos from './posts/*/photos/*.jpg';
-import thumbnails from './posts/*/thumbnail.jpg';
+import Tinybox from 'vue-tinybox';
 
 export default {
   name: 'Galleries',
   components: {
     LayoutDefault,
+    Tinybox,
   },
   data() {
     return {
-      posts,
-      thumbnails,
+      images: [],
+      galleryIndex: null,
     };
+  },
+  mounted() {
+    this.getPhotos().then(resp => {
+      this.images = resp;
+    });
   },
   methods: {
     getPhotosCount(postId) {
       return Object.keys(photos[postId]).length;
+    },
+    getPhotos() {
+      return getPhotos();
     },
   },
 }
@@ -40,26 +50,16 @@ export default {
 
 <style lang="stylus" scoped>
 .thumbnail
-  display block
-  height 300px
-  border-radius 3px
-  margin-bottom 30px
-  background-size cover
+  width 33.333333%
+  border-radius 6px
+  border 3px solid white
   background-position center
-  position relative
+  background-size cover
+  background-repeat no-repeat
+  float left
 
-  .thumbnail-gradient
-    background linear-gradient(0deg, rgba(45,71,103,1) 0%, rgba(255,255,255,0) 50%)
-    border-radius 0 0 3px 3px
-    height 100%
-
-  .info
-    position absolute
-    bottom 10px
-    left 20px
-    color #f0f0f0
-
-  a
+  &:after
+    content ''
     display block
-    height 100%
+    padding-bottom 100%
 </style>
