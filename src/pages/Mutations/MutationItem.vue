@@ -25,9 +25,6 @@ export default {
       report: reports[id],
     };
   },
-  mounted() {
-    console.log(this.report);
-  },
 }
 </script>
 

@@ -58,13 +58,21 @@
 </template>
 
 <script>
-import avatars from '../../../../public/avatar/*.jpg';
-
 export default {
   name: 'Team',
   data() {
     return {
-      avatars,
+      avatars: {
+        agung: 'https://user-images.githubusercontent.com/1132660/80646643-53de6500-8a97-11ea-8a75-06a62866a272.jpg',
+        asha: 'https://user-images.githubusercontent.com/1132660/80646656-5771ec00-8a97-11ea-9037-6bba88c9171c.jpg',
+        dias: 'https://user-images.githubusercontent.com/1132660/80646659-580a8280-8a97-11ea-849f-467e5e0515f1.jpg',
+        gio: 'https://user-images.githubusercontent.com/1132660/80646661-58a31900-8a97-11ea-8066-a597a2900bd7.jpg',
+        hasanah: 'https://user-images.githubusercontent.com/1132660/80646663-59d44600-8a97-11ea-8686-ed5aa060e41e.jpg',
+        iqbal: 'https://user-images.githubusercontent.com/1132660/80646664-59d44600-8a97-11ea-8315-021d332f8644.jpg',
+        lulu: 'https://user-images.githubusercontent.com/1132660/80646666-5a6cdc80-8a97-11ea-9901-ea2641da1095.jpg',
+        marcha: 'https://user-images.githubusercontent.com/1132660/80646668-5b057300-8a97-11ea-8644-b19c348371da.jpg',
+        rara: 'https://user-images.githubusercontent.com/1132660/80646672-5b9e0980-8a97-11ea-803a-c7cb987284f2.jpg',
+      },
     };
   },
 }
