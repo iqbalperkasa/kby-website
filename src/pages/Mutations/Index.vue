@@ -4,7 +4,10 @@
       h1.title Mutasi
       ul(v-for='(week, report, i) in reports')
         li
-          router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-{{ i }}
+          span(v-if='i === 2')
+            router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-3 dan Ke-4
+          span(v-else)
+            router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-{{ i }}
 </template>
 
 <script>
