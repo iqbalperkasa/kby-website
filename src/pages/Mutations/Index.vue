@@ -2,12 +2,12 @@
   section
     LayoutDefault
       h1.title Mutasi
-      ul(v-for='(week, report, i) in reports')
+      ul(v-for='(report, week, i) in reports')
         li
           span(v-if='i === 2')
-            router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-3 dan Ke-4
+            router-link(:to='`/mutasi/${week}`') Mutasi Minggu ke-3 dan Ke-4
           span(v-else)
-            router-link(:to='`/mutasi/${i-=-1}`') Mutasi Minggu ke-{{ i }}
+            router-link(:to='`/mutasi/${week}`') Mutasi Minggu ke-{{ week }}
 </template>
 
 <script>
