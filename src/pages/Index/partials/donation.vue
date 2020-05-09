@@ -4,15 +4,21 @@
     p Salurkan donasi terbaik kamu ke:
     .mt-30
       div.icon-text.icon-text-bca
-      div #[code.js-ctc.cursor-pointer(data-clipboard-text='0860491257') 0860 49 1257] a.n. Dias Servia Swara
-      .caption.js-ctc-notif.mb-5(data-ctc='0860491257') Klik no. rekening untuk copy ke clipboard
+      div #[code.js-clipboard.cursor-pointer(data-clipboard-text='0860491257') 0860 49 1257] a.n. Dias Servia Swara
+      .caption.js-clipboard-notif.mb-5(
+        v-if='isClipboardSupported'
+        ref='0860491257'
+      ) Klik no. rekening untuk copy ke clipboard
       details
         summary QR Code
         img(:src='imgSrc.qrBca')
     .mt-30
       div.icon-text.icon-text-ovo
-      div #[code.js-ctc.cursor-pointer(data-clipboard-text='081238553848') 0812 3855 3848] a.n. Dias Servia Swara
-      .caption.js-ctc-notif(data-ctc='081238553848') Klik no. rekening untuk copy ke clipboard
+      div #[code.js-clipboard.cursor-pointer(data-clipboard-text='081238553848') 0812 3855 3848] a.n. Dias Servia Swara
+      .caption.js-clipboard-notif(
+        v-if='isClipboardSupported'
+        ref='081238553848'
+      ) Klik no. rekening untuk copy ke clipboard
     //- a.btn.btn-primary.mt-30.mb-10(href='https://forms.gle/XS1kArogZNZbVpdZA')
     a.btn.btn-primary.mt-30.mb-10(href='https://form.jotform.com/201028295899062')
       | Konfirmasi Transfer Donasi
@@ -22,6 +28,7 @@
 </template>
 
 <script>
+import ClipboardJS from 'clipboard';
 import qrBca from 'public/qr-bca.jpg';
 
 export default {
@@ -31,7 +38,30 @@ export default {
       imgSrc: {
         qrBca,
       },
+      isClipboardSupported: false,
+      messages: {
+        clipboard: 'Klik no. rekening untuk copy ke clipboard',
+        copied: 'No. rekening berhasil di-copy',
+      },
     };
+  },
+  mounted() {
+    if (ClipboardJS.isSupported()) {
+      this.isClipboardSupported = true;
+      this.initClipboard();
+    }
+  },
+  methods: {
+    initClipboard() {
+      const clipboard = new ClipboardJS('.js-clipboard');
+
+      clipboard.on('success', (ev) => {
+        this.$refs[ev.text].innerText = this.messages.copied;
+        window.setTimeout(() => {
+          this.$refs[ev.text].innerText = this.messages.clipboard;
+        }, 2000);
+      });
+    },
   },
 }
 </script>
