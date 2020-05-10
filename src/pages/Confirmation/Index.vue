@@ -17,16 +17,6 @@ export default {
   components: {
     LayoutDefault,
   },
-  mounted() {
-    // console.log(this.$refs.mainForm);
-    // this.resizeIframe(this.$refs.mainForm);
-  },
-  methods: {
-    resizeIframe(iframe) {
-      iframe.width  = iframe.contentWindow.document.body.scrollWidth;
-      iframe.height = iframe.contentWindow.document.body.scrollHeight;
-    },
-  },
 }
 </script>
 
