@@ -1,6 +1,6 @@
-const axios = require('axios');
-const cors = require('./_middleware/cors');
-const { graphql, buildSchema } = require('graphql');
+import axios from 'axios';
+import cors from './_middleware/cors';
+import { graphql, buildSchema } from 'graphql';
 
 const {
   TUMBLR_API,
@@ -152,7 +152,7 @@ const schema = buildSchema(`
   }
 `);
 
-module.exports = async (req, res) => {
+async function galleries(req, res) {
   cors(req, res);
 
   const isFull = typeof req.query.full === 'string';
@@ -193,3 +193,5 @@ module.exports = async (req, res) => {
     res.json(photos);
   }
 };
+
+export default galleries;
