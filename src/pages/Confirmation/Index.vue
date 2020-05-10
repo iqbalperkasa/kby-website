@@ -23,7 +23,7 @@ export default {
 <style lang="stylus" scoped>
 .form
   width 100%
-  height 100vh
+  height 110vh
   border none
   overflow hidden
 </style>
