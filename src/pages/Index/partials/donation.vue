@@ -20,7 +20,8 @@
         ref='081238553848'
       ) Klik no. rekening untuk copy ke clipboard
     //- a.btn.btn-primary.mt-30.mb-10(href='https://forms.gle/XS1kArogZNZbVpdZA')
-    a.btn.btn-primary.mt-30.mb-10(href='https://form.jotform.com/201028295899062')
+    //- a.btn.btn-primary.mt-30.mb-10(href='https://form.jotform.com/201028295899062')
+    router-link.btn.btn-primary.mt-30.mb-10(to='/konfirmasi')
       | Konfirmasi Transfer Donasi
       .icon-text.icon-text-arrow-up-right
     .caption Sobat berbagi, jangan lupa #[br] untuk konfirmasi jika sudah berbagi ya.
