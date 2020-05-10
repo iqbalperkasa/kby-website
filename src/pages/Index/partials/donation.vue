@@ -20,9 +20,10 @@
         ref='081238553848'
       ) Klik no. rekening untuk copy ke clipboard
     //- a.btn.btn-primary.mt-30.mb-10(href='https://forms.gle/XS1kArogZNZbVpdZA')
-    a.btn.btn-primary.mt-30.mb-10(href='https://form.jotform.com/201028295899062')
+    //- a.btn.btn-primary.mt-30.mb-10(href='https://form.jotform.com/201028295899062')
+    router-link.btn.btn-primary.mt-30.mb-10(to='/konfirmasi')
       | Konfirmasi Transfer Donasi
-      .icon-text.icon-text-arrow-up-right
+      .icon-text.icon-text-arrow-right
     .caption Sobat berbagi, jangan lupa #[br] untuk konfirmasi jika sudah berbagi ya.
     .mt-30 Sobat berbagi juga bisa berdonasi berupa makanan dan barang-barang seperti masker kain, cairan disinfektan, dan hand sanitizer. #[br] Untuk info lebih lengkapnya silakan hubungi nomor di bawah ini.
 </template>
@@ -89,7 +90,7 @@ export default {
     opacity 0.5
     line-height 20px
 
-.icon-text-arrow-up-right::before
+.icon-text-arrow-right::before
   margin-left 5px
   margin-top -3px
 </style>
