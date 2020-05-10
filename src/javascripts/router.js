@@ -7,6 +7,7 @@ import Index from 'pages/Index/Index.vue';
 import Galleries from 'pages/Galleries/Index.vue';
 import About from 'pages/About/Index.vue';
 import Confirmation from 'pages/Confirmation/Index.vue';
+import ConfirmationSuccess from 'pages/Confirmation/Success.vue';
 import Mutations from 'pages/Mutations/Index.vue';
 import MutationItem from 'pages/Mutations/MutationItem.vue';
 
@@ -18,6 +19,7 @@ const routes = [
   { path: '/mutasi', component: Mutations },
   { path: '/mutasi/:id', component: MutationItem },
   { path: '/konfirmasi', component: Confirmation },
+  { path: '/konfirmasi/berhasil', component: ConfirmationSuccess },
 ];
 
 const router = new VueRouter({
