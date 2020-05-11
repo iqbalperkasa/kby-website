@@ -3,7 +3,9 @@
     LayoutDefault.text-align-center
       img.mb-50.illust-success(:src='illustSuccess')
       h2.mb-20.heading Terima Kasih
-      p.mb-10 Konfirmasi donasi telah kami terima dan akan kami proses.
+      p.mb-10.
+        Konfirmasi donasi telah kami terima dan akan kami proses. #[br]
+        Silakan follow Instagram kami di #[a(href='https://www.instagram.com/kitaberbagiyuk') @kitaberbagiyuk] untuk mengikuti update kegiatan kami.
 </template>
 
 <script>
