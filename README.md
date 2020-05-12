@@ -14,7 +14,7 @@ Jalankan server frontend di local.
 $ npm run dev # http://localhost:1234, HMR activated (auto reload)
 ```
 
-(Opsional) Jalankan server backend di local.
+(Opsional). Jalankan server backend di local.
 
 ```shell
 $ npm install -g now@latest # instal now cli
