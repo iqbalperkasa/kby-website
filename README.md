@@ -8,13 +8,13 @@ $ cd kby-website
 $ npm install
 ```
 
-Jalanin server frontend di local.
+Jalankan server frontend di local.
 
 ```shell
 $ npm run dev # http://localhost:1234, HMR activated (auto reload)
 ```
 
-(Opsional) Jalanin server backend di local.
+(Opsional) Jalankan server backend di local.
 
 ```shell
 $ npm install -g now@latest # instal now cli
