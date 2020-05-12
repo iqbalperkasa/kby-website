@@ -5,7 +5,7 @@
 ```shell
 $ git clone git@github.com:iqbalperkasa/kby-website.git
 $ cd kby-website
-$ npm run install
+$ npm install
 ```
 
 Jalanin server frontend di local.
@@ -17,7 +17,7 @@ $ npm run dev # http://localhost:1234, HMR activated (auto reload)
 (Opsional) Jalanin server backend di local.
 
 ```shell
-$ npm i -g now@latest # instal now cli
+$ npm install -g now@latest # instal now cli
 $ now dev # http://localhost:3000, auto reload
 ```
 
