@@ -23,7 +23,7 @@ $ now dev # http://localhost:3000, auto reload
 
 ## Production
 
-Setiap push commit ke remote, otomatis akan terdeploy oleh [Vercel](https://vercel.com) di branch remote tersebut, atau bisa deploy langsung dari local:
+Setiap push commit ke remote, otomatis akan terdeploy oleh [Vercel](https://vercel.com) di branch remote tersebut, atau bisa deploy manual dari local:
 
 ```shell
 $ now
