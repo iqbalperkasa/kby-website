@@ -995,11 +995,6 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-api@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/api/-/api-0.0.1.tgz#8f2d31b27267a158cc7674d8f671d28553ff5b36"
-  integrity sha512-ACyyagYy4AzfQtvfAK2uahbOsN8Zh8cEP6wP5UU7VUCI1xtnl9iOE2sKgPxyFWzPjLarGDTpEvoK5YclAahCSA==
-
 argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
