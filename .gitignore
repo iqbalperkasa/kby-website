@@ -5,3 +5,4 @@ dist/
 
 .now
 .env
+.vercel
